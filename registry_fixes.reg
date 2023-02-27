@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; remove OneDrive from file explorer tree
+[HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}]
+@="OneDrive"
+"System.IsPinnedToNameSpaceTree"=dword:00000000
+
+
+; restore pre-Win11 context menu
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
+
+; set default drag-and-drop to copy
+[HKEY_CLASSES_ROOT\*]
+"DefaultDropEffect"=dword:00000001
+
+[HKEY_CLASSES_ROOT\AllFilesystemObjects]
+"DefaultDropEffect"=dword:00000001
