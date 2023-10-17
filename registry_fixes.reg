@@ -7,12 +7,28 @@ Windows Registry Editor Version 5.00
 
 
 ; restore pre-Win11 context menu
+; https://answers.microsoft.com/en-us/windows/forum/all/restore-old-right-click-context-menu-in-windows-11/a62e797c-eaf3-411b-aeec-e460e6e5a82a
 [HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
 @=""
 
+
 ; set default drag-and-drop to copy
+; https://www.elevenforum.com/t/change-default-drag-and-drop-action-in-windows-11.2924/
 [HKEY_CLASSES_ROOT\*]
 "DefaultDropEffect"=dword:00000001
 
 [HKEY_CLASSES_ROOT\AllFilesystemObjects]
 "DefaultDropEffect"=dword:00000001
+
+; reset default drag-and-drop
+; [HKEY_CLASSES_ROOT\*]
+; "DefaultDropEffect"=-
+
+; [HKEY_CLASSES_ROOT\AllFilesystemObjects]
+; "DefaultDropEffect"=-
+
+
+; set auto lock timeout
+; https://www.elevenforum.com/t/automatically-lock-computer-after-inactivity-in-windows-11.4774/
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System​]
+; "InactivityTimeoutSecs"=dword:00000300
