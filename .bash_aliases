@@ -1,3 +1,8 @@
+alias k='kubectl'
+
+alias npmi='npm i --legacy-peer-deps'
+alias npmci='npm ci --legacy-peer-deps'
+
 alias gti='git'
 alias gs='git status'
 alias gpl='git pull'
@@ -12,3 +17,7 @@ alias ll='ls -lhA'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias cls='clear'
+
+alias w=watson
+
+alias ssh-<target>="ssh <user>@<address> -i <path/to/key/file.pem>"
