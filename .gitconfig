@@ -1,0 +1,18 @@
+[user]
+        name = 
+        email = 
+        signingkey = 
+[commit]
+        gpgsign = true
+[core]
+        ignorecase = false
+[push]
+        followTags = true
+[merge]
+        conflictstyle = diff3
+[rebase]
+        autosquash = true
+[fetch]
+        prune = true
+[pull]
+        rebase = true
