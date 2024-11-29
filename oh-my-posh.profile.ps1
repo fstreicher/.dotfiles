@@ -1,0 +1,1 @@
+oh-my-posh init pwsh --config 'C:/Users/FabianStreicher/posh/themes/quick-term-kube.omp.json' | Invoke-Expression
